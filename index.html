@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BASIS Tutoring Arizona</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+
+    header {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #162e6e;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: #e0e7ff;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background-color: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    button {
+      background-color: #1e3a8a;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #374fc7;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .success {
+      color: green;
+      font-weight: bold;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>BASIS Tutoring Arizona</h1>
+  <p>Personalized Support for Comps & Pre-Comps</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#reservation">Reservation</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero">
+  <h1>Expert Tutoring for BASIS Students</h1>
+  <p>Guided by High School BASIS Alumni</p>
+</section>
+
+<section id="about" class="section">
+  <div class="card">
+    <h2>About Us</h2>
+    <p>
+      We provide specialized tutoring for middle school students in BASIS schools across Arizona.
+      Our tutors are high school BASIS alumni who understand the rigor and expectations.
+    </p>
+  </div>
+</section>
+
+<section id="services" class="section">
+  <div class="card">
+    <h2>Our Services</h2>
+    <ul>
+      <li>📘 Pre-Comps Preparation</li>
+      <li>📗 Comps Training</li>
+      <li>🎯 Personalized Study Plans</li>
+      <li>🧠 Subject Coaching</li>
+      <li>📈 Test Strategies</li>
+    </ul>
+  </div>
+</section>
+
+<section id="reservation" class="section">
+  <div class="card">
+    <h2>Book a Session</h2>
+
+    <form id="reservationForm">
+      <label>Student Name</label>
+      <input type="text" required>
+
+      <label>Parent Email</label>
+      <input type="email" required>
+
+      <label>Grade</label>
+      <select required>
+        <option value="">Select Grade</option>
+        <option>6th Grade</option>
+        <option>7th Grade</option>
+        <option>8th Grade</option>
+      </select>
+
+      <label>Focus Area</label>
+      <select required>
+        <option value="">Select</option>
+        <option>Pre-Comps</option>
+        <option>Comps</option>
+        <option>General Tutoring</option>
+      </select>
+
+      <label>Preferred Date</label>
+      <input type="date" required>
+
+      <label>Preferred Time</label>
+      <input type="time" required>
+
+      <button type="submit">Reserve Session</button>
+    </form>
+
+    <p class="success" id="successMessage">
+      ✅ Your session request has been submitted! We will contact you soon.
+    </p>
+
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="card">
+    <h2>Contact Us</h2>
+    <p>Email: yourtutoring@email.com</p>
+    <p>Phone: (123) 456-7890</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 BASIS Tutoring Arizona</p>
+</footer>
+
+<script>
+  const form = document.getElementById('reservationForm');
+  const successMessage = document.getElementById('successMessage');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    successMessage.style.display = 'block';
+    form.reset();
+  });
+</script>
+
+</body>
+</html>
